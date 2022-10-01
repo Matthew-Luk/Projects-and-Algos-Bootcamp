@@ -1,0 +1,49 @@
+Description: For my solo project I am trying to create a fake flower shop for my Aunty because she loves propagating and has a lot of plants at her house and one day my little cousin, her, and myself were sitting around drinking and we were joking about creating a flower shop for her just as a joke but this will give me the opportunity to actually make it and have fun with it
+
+ 
+
+Stack: Python
+
+ 
+
+Feature List:
+
+·   Login and registration page will have validations.
+
+	o   First and last name will have a character minimum.
+
+	o   Email will use regex and cannot be in DB.
+
+	o   Passwords will need to match.
+
+·   Dashboard will have pictures and links to flower/plant types.
+
+	o   Links to the flowers may not have any content for now because I am not seeing my aunt for a while so I don’t know when I will be able to get more pictures or I will just link them to some google images or redirect to a real flower shop that sells these items.
+
+	o   Pictures will be of random flowers and plants.
+
+·   Dashboard will have a navbar.
+
+	o   Navbar will consist of:
+
+		§  Reviews tab.
+
+		·   “Customers” will be able to leave reviews and delete or update their review if the review being edited/deleted was created by the user logged in.
+
+		·   Clicking on the edit button will redirect to another page where the user will be able to change their review.
+
+		§  Home tab (if not on home page or I might just put all 4 tabs on every page except the dashboard page so we can navigate to any part of the app).
+
+		·   Redirects user to the dashboard.
+
+		§  Edit profile tab.
+
+		·   User will be able to edit personal information such as first name, last name and email.
+
+		§  Sign out tab.
+
+		·   Signs the user out clearing session.
+
+ 
+
+GitHub repo link: https://github.com/Matthew-Luk/Projects-and-Algos-Bootcamp/tree/master/projects/solo_project
