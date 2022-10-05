@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAEM Flower Shop</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbarl">
+                <img src="/static/assets/logo.jpg" alt="logo">
+                <p>BAEM Flower Shop</p>
+            </div>
+            <div class="navbarr">
+                <a href="/reviews">Reviews</a>
+                <a href="/edit_profile/{{session_id}}">Edit Profile</a>
+                <a class="logout" href="/logout">Sign Out</a>
+            </div>
+        </div>
+        <div class="content-review">
+            <div class="content-reviewt">
+                <form action="/update/review" method="POST">
+                    <label for="description">Leave a Review: </label>
+                    <textarea name="description" cols="30" rows="10"></textarea>
+                    <input id="review_btn" type="submit" value="Update Review">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
