@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAEM Flower Shop - Reviews</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbarl">
+                <img src="./static/assets/logo.jpg">
+                <p>BAEM Flower Shop</p>
+            </div>
+            <div class="navbarr">
+                <a href="/dashboard">Home</a>
+                <a href="/edit_profile/{{session_id}}">Edit Profile</a>
+                <a class="logout"href="/logout">Sign Out</a>
+            </div>
+        </div>
+        <div class="content-review">
+            <div class="content-reviewt">
+                <form action="/submit_review" method="POST">
+                    <label for="description">Leave a Review: </label>
+                    <textarea name="description" cols="30" rows="10"></textarea>
+                    <input id="review_btn" type="submit" value="Submit Review">
+                </form>
+            </div>
+            <div class="content-reviewb">
+                <h2>Reviews: </h2>
+                {%for i in all_reviews%}
+                <div class="review">
+                    <p>Name: {{i.users.first_name}} {{i.users.last_name}}</p>
+                    <p>Review: {{i.description}}</p>
+                    <p>Posted on: {{i.created_at}}</p>
+                    {%if i.users.id == session_id%}
+                    <a href="/edit/review/{{i.id}}">Edit</a>
+                    <a href="/delete/review/{{i.id}}">Delete</a>
+                    {%endif%}
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
