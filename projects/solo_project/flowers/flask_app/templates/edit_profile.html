@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAEM Flower Shop</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbarl">
+                <img src="/static/assets/logo.jpg" alt="logo">
+                <p>BAEM Flower Shop</p>
+            </div>
+            <div class="navbarr">
+                <a href="/dashboard">Home</a>
+                <a href="/reviews">Reviews</a>
+                <a class="logout" href="/logout">Sign Out</a>
+            </div>
+        </div>
+        <div>
+            <form action="/update_profile" method="POST">
+                <h1>Update User Info</h1>
+                <div class="form-group">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" name="first_name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" name ="last_name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" class="form-control">
+                </div>
+                <input type="submit" value="Update User Information">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
