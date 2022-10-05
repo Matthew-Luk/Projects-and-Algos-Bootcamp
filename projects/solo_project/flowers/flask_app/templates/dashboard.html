@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAEM Flower Shop</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbarl">
+                <img src="/static/assets/logo.jpg" alt="logo">
+                <p>BAEM Flower Shop</p>
+            </div>
+            <div class="navbarr">
+                <a href="/reviews">Reviews</a>
+                <a href="/edit_profile/{{session_id}}">Edit Profile</a>
+                <a class="logout"href="/logout">Sign Out</a>
+            </div>
+        </div>
+        <div class="links">
+            <ul>
+                <a href="https://www.google.com/search?q=rose&tbm=isch&ved=2ahUKEwi97Nv21bP5AhUJj2oFHXDMBa0Q2-cCegQIABAA&oq=rose&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIICAAQsQMQgwEyBAgAEEMyBwgAELEDEEMyBAgAEEMyBAgAEEMyBAgAEEMyCwgAEIAEELEDEIMBOggIABCABBCxAzoFCAAQgARQrgNYmwdgtghoAHAAeACAAWGIAcsDkgEBNZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=4yHvYv3uE4meqtsP8JiX6Ao&authuser=0&bih=866&biw=1512&hl=en">Rose</a>
+                <a href="https://www.google.com/search?q=orchid&tbm=isch&ved=2ahUKEwirxP-E1rP5AhWZkGoFHTStCFEQ2-cCegQIABAA&oq=orchid&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIHCAAQsQMQQzILCAAQgAQQsQMQgwEyBwgAELEDEEMyBAgAEEMyCwgAEIAEELEDEIMBMgcIABCxAxBDMggIABCABBCxAzIECAAQQzIECAAQQzoFCAAQgAQ6CAgAELEDEIMBULAGWK4KYLwLaABwAHgAgAFdiAHTBJIBATeYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=ASLvYuu_EJmhqtsPtNqiiAU&authuser=0&bih=866&biw=1512&hl=en">Orchid</a>
+                <a href="https://www.google.com/search?q=aloe&tbm=isch&ved=2ahUKEwjF18WM1rP5AhWNlmoFHU1dA_wQ2-cCegQIABAA&oq=aloe&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIHCAAQsQMQQzIECAAQQzIICAAQgAQQsQMyCAgAEIAEELEDMggIABCABBCxAzIICAAQgAQQsQMyCAgAEIAEELEDMgUIABCABDIICAAQgAQQsQM6CwgAEIAEELEDEIMBOggIABCxAxCDAToECAAQAzoKCAAQsQMQgwEQQ1CnBljmCWCpDWgAcAB4AIABZIgBswOSAQM0LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=ESLvYoWLBo2tqtsPzbqN4A8&authuser=0&bih=866&biw=1512&hl=en">Aloe</a>
+                <a href="https://www.google.com/search?q=cactus&tbm=isch&ved=2ahUKEwjIp4qS1rP5AhUokGoFHRoPBT8Q2-cCegQIABAA&oq=cactus&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIHCAAQsQMQQzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIICAAQsQMQgwEyBAgAEAMyBAgAEAMyBAgAEAMyBAgAEAM6CAgAEIAEELEDOgUIABCABDoLCAAQgAQQsQMQgwFQtwNYygpg1Q5oAHAAeACAAV6IAeYEkgEBN5gBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=HCLvYsipK6igqtsPmp6U-AM&authuser=0&bih=866&biw=1512&hl=en">Cactus</a>
+                <a href="https://www.google.com/search?q=daisy&tbm=isch&ved=2ahUKEwiEjMuX1rP5AhXcnGoFHaoDCMQQ2-cCegQIABAA&oq=daisy&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIICAAQgAQQsQMyCwgAEIAEELEDEIMBMgQIABBDMgcIABCxAxBDMgQIABBDOggIABCxAxCDAToECAAQAzoFCAAQgARQqQVYlQlg_QpoAHAAeACAAV2IAYwEkgEBNpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=KCLvYoTYD9y5qtsPqoegoAw&authuser=0&bih=866&biw=1512&hl=en">Daisy</a>
+                <a href="https://www.google.com/search?q=carnation&tbm=isch&ved=2ahUKEwjnkI3_1bP5AhUHkGoFHZO3DAIQ2-cCegQIABAA&oq=carnation&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIHCAAQsQMQQzIICAAQgAQQsQMyBwgAELEDEEMyBAgAEEMyBQgAEIAEMgQIABBDMgcIABCxAxBDMggIABCABBCxAzIECAAQQzoICAAQsQMQgwE6CwgAEIAEELEDEIMBULsFWI4NYOQOaABwAHgAgAFtiAGXB5IBAzguMpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=9CHvYufGN4egqtsPk--yEA&authuser=0&bih=866&biw=1512&hl=en">Carnation</a>
+                <a href="https://www.google.com/search?q=tulip&tbm=isch&ved=2ahUKEwjq67v01bP5AhVYkWoFHZ_CDGMQ2-cCegQIABAA&oq=tulip&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIHCAAQsQMQQzIICAAQgAQQsQMyCAgAEIAEELEDMgcIABCxAxBDMgcIABCxAxBDMgcIABCxAxBDMgQIABBDMgQIABBDMggIABCABBCxAzoFCAAQgAQ6CAgAELEDEIMBOgsIABCABBCxAxCDAVClBVjkCmDHD2gAcAB4AIABc4gBxwSSAQM0LjKYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=3iHvYuqEJdiiqtsPn4WzmAY&authuser=0&bih=866&biw=1512&hl=en">Tulip</a>
+            </ul>
+        </div>
+        <h2 id="head2">The Best Flowers You Can Get</h2>
+        <div class="content">
+            <div class="row1">
+                <div>
+                    <img src="./static/assets/home1.jpg" id="home1">
+                </div>
+                <div>
+                    <img src="./static/assets/home5.JPG" id="home5">
+                </div>
+                <div>
+                    <img src="./static/assets/home4.HEIC" id="home4">
+                </div>
+                <div>
+                    <img src="./static/assets/home2.jpg" id="home2">
+                </div>
+            </div>
+            <div class="row2">
+                <div class="contentl">
+                    <div class="contentl1">
+
+                    </div>
+                    <div class="contentl2">
+
+                    </div>
+                </div>
+                <div class="contentr">
+                    <img src="./static/assets/prop1.jpg" id="home6">
+                    <img src="./static/assets/prop1.jpg" id="home7">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
