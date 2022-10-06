@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import redirect, render_template, request, session, flash
 from flask_app import app
 from flask_app.models.user import User
@@ -48,6 +49,11 @@ def edit_profile(id):
     }
     user = User.get_by_id(data)
     return render_template("edit_profile.html", user = User.get_by_id(data))
+
+@app.route("/update_profile", methods=["POST"])
+def update_user():
+    User.update_user(request.form)
+    return redirect("/dashboard")
 
 @app.route("/logout")
 def logout():
