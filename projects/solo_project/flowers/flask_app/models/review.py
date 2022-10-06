@@ -42,5 +42,15 @@ class Review:
 
     @classmethod
     def get_by_id(cls,data):
-        query = "SELECT * FROM reviews WHERE id = %(id)s;"
+        query = "SELECT * FROM reviews WHERE id=%(id)s;"
+        results = connectToMySQL(cls.db).query_db(query,data)
+        if len(results) < 1:
+            return False
+        row = results[0]
+        review = cls(row)
+        return review
+
+    @classmethod
+    def update_review(cls,data):
+        query = "UPDATE reviews SET description=%(description)s WHERE id=%(id)s;"
         return connectToMySQL(cls.db).query_db(query,data)
