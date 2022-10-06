@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import render_template, request, redirect, session
 from flask_app import app
 from flask_app.models.review import Review
@@ -23,6 +24,11 @@ def edit_review(id):
     }
     review = Review.get_by_id(data)
     return render_template("edit_review.html", review = review, session_id=session["user_id"])
+
+@app.route("/update/review", methods=["POST"])
+def update_review():
+    Review.update_review(request.form)
+    return redirect("/reviews")
 
 @app.route("/delete/review/<int:id>")
 def delete_review(id):
