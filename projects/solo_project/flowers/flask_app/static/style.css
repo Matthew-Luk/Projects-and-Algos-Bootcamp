@@ -30,13 +30,16 @@
 
 .navbarl img{
     height: 50px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    margin-right: 5px;
 }
 
 .navbarl p{
-    margin-left: 20px;
     font-weight:bolder;
     font-size: larger;
+    margin-top: 3px;
 }
 
 .navbarr{
@@ -44,6 +47,8 @@
     flex: 1;
     justify-content: end;
     margin-right: 30px;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .navbarr a{
