@@ -30,6 +30,11 @@ class User:
         return user
     
     @classmethod
+    def update_user(cls,data):
+        query = "UPDATE users SET first_name=%(first_name)s, last_name=%(last_name)s, email=%(email)s WHERE id=%(id)s;"
+        return connectToMySQL(cls.db).query_db(query,data)
+    
+    @classmethod
     def get_by_id(cls,data):
         query = "SELECT * FROM users WHERE id=%(id)s;"
         results = connectToMySQL(cls.db).query_db(query,data)
