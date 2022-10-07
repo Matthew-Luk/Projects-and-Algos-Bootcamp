@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BAEM Flower Shop</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
@@ -22,13 +23,13 @@
         </div>
         <div class="links">
             <ul>
-                <a href="https://www.google.com/search?q=rose&tbm=isch&ved=2ahUKEwi97Nv21bP5AhUJj2oFHXDMBa0Q2-cCegQIABAA&oq=rose&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIICAAQsQMQgwEyBAgAEEMyBwgAELEDEEMyBAgAEEMyBAgAEEMyBAgAEEMyCwgAEIAEELEDEIMBOggIABCABBCxAzoFCAAQgARQrgNYmwdgtghoAHAAeACAAWGIAcsDkgEBNZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=4yHvYv3uE4meqtsP8JiX6Ao&authuser=0&bih=866&biw=1512&hl=en">Rose</a>
-                <a href="https://www.google.com/search?q=orchid&tbm=isch&ved=2ahUKEwirxP-E1rP5AhWZkGoFHTStCFEQ2-cCegQIABAA&oq=orchid&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIHCAAQsQMQQzILCAAQgAQQsQMQgwEyBwgAELEDEEMyBAgAEEMyCwgAEIAEELEDEIMBMgcIABCxAxBDMggIABCABBCxAzIECAAQQzIECAAQQzoFCAAQgAQ6CAgAELEDEIMBULAGWK4KYLwLaABwAHgAgAFdiAHTBJIBATeYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=ASLvYuu_EJmhqtsPtNqiiAU&authuser=0&bih=866&biw=1512&hl=en">Orchid</a>
-                <a href="https://www.google.com/search?q=aloe&tbm=isch&ved=2ahUKEwjF18WM1rP5AhWNlmoFHU1dA_wQ2-cCegQIABAA&oq=aloe&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIHCAAQsQMQQzIECAAQQzIICAAQgAQQsQMyCAgAEIAEELEDMggIABCABBCxAzIICAAQgAQQsQMyCAgAEIAEELEDMgUIABCABDIICAAQgAQQsQM6CwgAEIAEELEDEIMBOggIABCxAxCDAToECAAQAzoKCAAQsQMQgwEQQ1CnBljmCWCpDWgAcAB4AIABZIgBswOSAQM0LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=ESLvYoWLBo2tqtsPzbqN4A8&authuser=0&bih=866&biw=1512&hl=en">Aloe</a>
-                <a href="https://www.google.com/search?q=cactus&tbm=isch&ved=2ahUKEwjIp4qS1rP5AhUokGoFHRoPBT8Q2-cCegQIABAA&oq=cactus&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIHCAAQsQMQQzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIICAAQsQMQgwEyBAgAEAMyBAgAEAMyBAgAEAMyBAgAEAM6CAgAEIAEELEDOgUIABCABDoLCAAQgAQQsQMQgwFQtwNYygpg1Q5oAHAAeACAAV6IAeYEkgEBN5gBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=HCLvYsipK6igqtsPmp6U-AM&authuser=0&bih=866&biw=1512&hl=en">Cactus</a>
-                <a href="https://www.google.com/search?q=daisy&tbm=isch&ved=2ahUKEwiEjMuX1rP5AhXcnGoFHaoDCMQQ2-cCegQIABAA&oq=daisy&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIICAAQgAQQsQMyCwgAEIAEELEDEIMBMgQIABBDMgcIABCxAxBDMgQIABBDOggIABCxAxCDAToECAAQAzoFCAAQgARQqQVYlQlg_QpoAHAAeACAAV2IAYwEkgEBNpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=KCLvYoTYD9y5qtsPqoegoAw&authuser=0&bih=866&biw=1512&hl=en">Daisy</a>
-                <a href="https://www.google.com/search?q=carnation&tbm=isch&ved=2ahUKEwjnkI3_1bP5AhUHkGoFHZO3DAIQ2-cCegQIABAA&oq=carnation&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIHCAAQsQMQQzIICAAQgAQQsQMyBwgAELEDEEMyBAgAEEMyBQgAEIAEMgQIABBDMgcIABCxAxBDMggIABCABBCxAzIECAAQQzoICAAQsQMQgwE6CwgAEIAEELEDEIMBULsFWI4NYOQOaABwAHgAgAFtiAGXB5IBAzguMpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=9CHvYufGN4egqtsPk--yEA&authuser=0&bih=866&biw=1512&hl=en">Carnation</a>
-                <a href="https://www.google.com/search?q=tulip&tbm=isch&ved=2ahUKEwjq67v01bP5AhVYkWoFHZ_CDGMQ2-cCegQIABAA&oq=tulip&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIHCAAQsQMQQzIICAAQgAQQsQMyCAgAEIAEELEDMgcIABCxAxBDMgcIABCxAxBDMgcIABCxAxBDMgQIABBDMgQIABBDMggIABCABBCxAzoFCAAQgAQ6CAgAELEDEIMBOgsIABCABBCxAxCDAVClBVjkCmDHD2gAcAB4AIABc4gBxwSSAQM0LjKYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=3iHvYuqEJdiiqtsPn4WzmAY&authuser=0&bih=866&biw=1512&hl=en">Tulip</a>
+                <a href="https://www.ftd.com/flowers/roses/all?cid=ftddts&prid=ftddts">Rose</a>
+                <a href="https://www.ftd.com/flowers/orchids?cid=ftddts&prid=ftddts">Orchid</a>
+                <a href="https://www.ftd.com/search/aloe/prid=ftddts&cid=ftddts?cid=ftddts&prid=ftddts">Aloe</a>
+                <a href="https://www.ftd.com/search/cactus?cid=ftddts&prid=ftddts">Cactus</a>
+                <a href="https://www.ftd.com/flowers/daisies?cid=ftddts&prid=ftddts">Daisy</a>
+                <a href="https://www.ftd.com/flowers/carnations?cid=ftddts&prid=ftddts">Carnation</a>
+                <a href="https://www.ftd.com/flowers/tulips?cid=ftddts&prid=ftddts&q=tulip">Tulip</a>
             </ul>
         </div>
         <h2 id="head2">The Best Flowers You Can Get</h2>
@@ -61,6 +62,20 @@
                     <img src="./static/assets/prop1.jpg" id="home7">
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <p>© 2022 Company, Inc</p>
+        </div>
+        <div>
+            <img src="./static/assets/logo.jpg" class="logo">
+        </div>
+        <div class="footer-extra">
+            <p>Features</p>
+            <p>FAQs</p>
+            <p>About</p>
+            <p>Contact Us</p>
         </div>
     </div>
 </body>
