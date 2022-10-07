@@ -52,5 +52,5 @@ class Review:
 
     @classmethod
     def update_review(cls,data):
-        query = "UPDATE reviews SET description=%(description)s WHERE id=%(id)s;"
+        query = "UPDATE reviews SET description=%(description)s, created_at=NOW() WHERE id=%(id)s;"
         return connectToMySQL(cls.db).query_db(query,data)
