@@ -3,6 +3,8 @@
     min-height: 100vw;
     margin: 0px;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar{
@@ -12,6 +14,7 @@
     border-radius: 25px;
     background-color:#fdfa72;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 .navbar a{
@@ -65,10 +68,11 @@
     margin-right: 15px;
     font-family: Arial, Helvetica, sans-serif;
     border-bottom: 2px solid black;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
-ul a{
+ul a,ul a:hover{
     text-decoration: none;
     color: black;
 }
@@ -87,7 +91,7 @@ ul a{
 }
 
 #home1, #home2, #home4, #home5{
-    height: 500px;
+    height: 400px;
 }
 
 #home6, #home7{
@@ -151,4 +155,29 @@ ul a{
     display: flex;
     justify-content: center;
     margin-top: 50px;
+}
+
+.footer{
+    background-color: #fdfa72;
+    position: fixed;
+    bottom: 0%;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.footer-extra{
+    display: flex;
+}
+
+.footer-extra p {
+    margin-right: 10px;
+}
+
+.logo{
+    height: 40px;
 }
