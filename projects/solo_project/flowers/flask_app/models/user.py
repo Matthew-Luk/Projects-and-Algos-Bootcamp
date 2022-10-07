@@ -79,6 +79,20 @@ class User:
             flash("Invalid email address!!!")
             is_valid = False
         if user["password"] != user["confirm_password"]:
-            flash("PAsswords do not match")
+            flash("Passwords do not match")
+            is_valid = False
+        return is_valid
+
+    @staticmethod
+    def validate_update(user):
+        is_valid=True
+        if len(user["first_name"]) < 2:
+            flash("First name must be at least 3 characters.")
+            is_valid = False
+        if len(user["last_name"]) < 2:
+            flash("Last name must be at least 3 characters.")
+            is_valid = False
+        if not EMAIL_REGEX.match(user["email"]):
+            flash("Invalid email address!!!")
             is_valid = False
         return is_valid
