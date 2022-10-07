@@ -52,8 +52,14 @@ def edit_profile(id):
 
 @app.route("/update_profile", methods=["POST"])
 def update_user():
-    User.update_user(request.form)
-    return redirect("/dashboard")
+    data = {
+        "id":session["user_id"]
+    }
+    user = User.get_by_id(data)
+    if User.validate_update(request.form):
+        User.update_user(request.form)
+        return redirect("/dashboard")
+    return redirect(f"/edit_profile/{user.id}")
 
 @app.route("/logout")
 def logout():
