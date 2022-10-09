@@ -28,6 +28,13 @@
                         <input type="hidden" name="id" value="{{review.id}}">
                         <label for="first_name" class="h3 mt-2">Update Review: </label>
                         <textarea class="form-control" name="description" rows="3"></textarea>
+                        {%with messages = get_flashed_messages()%}
+                            {%if messages%}
+                                {%for message in messages%}
+                                    <p>{{message}}</p>
+                                {%endfor%}
+                            {%endif%}
+                        {%endwith%}
                     </div>
                     <input type="submit" id="review_btn" value="Update Review">
                 </form>
