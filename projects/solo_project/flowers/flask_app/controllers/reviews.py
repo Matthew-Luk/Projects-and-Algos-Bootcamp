@@ -14,7 +14,8 @@ def submit_review():
         "user_id":session["user_id"],
         "description":request.form["description"]
     }
-    Review.save(data)
+    if Review.validate_review(request.form):
+        Review.save(data)
     return redirect("/reviews")
 
 @app.route("/edit/review/<int:id>")
@@ -27,7 +28,12 @@ def edit_review(id):
 
 @app.route("/update/review", methods=["POST"])
 def update_review():
-    Review.update_review(request.form)
+    data = {
+        "id":id
+    }
+    review = Review.get_by_id(data)
+    if Review.validate_review(request.form):
+        Review.update_review(request.form)
     return redirect("/reviews")
 
 @app.route("/delete/review/<int:id>")
