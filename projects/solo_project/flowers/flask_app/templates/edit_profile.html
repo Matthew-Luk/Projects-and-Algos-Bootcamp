@@ -23,11 +23,10 @@
         </div>
         <div>
             <form action="/update_profile" method="POST">
-                <h2>Update User Info</h2>
+                <h3 class="mt-2">Update User Info</h3>
                 <div>
                     {%with messages = get_flashed_messages()%}
                         {%if messages%}
-                            <h2>FLASH!!! AHHH!!!</h2>
                             {%for message in messages%}
                                 <p>{{message}}</p>
                             {%endfor%}
