@@ -17,11 +17,6 @@
     padding-bottom: 10px;
 }
 
-.navbar a{
-    text-decoration: none;
-    font-size: 20px;
-}
-
 .navbarl{
     font-family: Arial, Helvetica, sans-serif;
     color: black;
@@ -54,11 +49,12 @@
     margin-bottom: 20px;
 }
 
-.navbarr a{
+.navbarr a, .navbarr a:hover{
     margin-left: 20px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
+    text-decoration: none;
 }
 
 .links ul{
@@ -107,16 +103,9 @@ ul a,ul a:hover{
 }
 
 .contentl{
-    flex: 1;
+    flex: 2;
     display: flex;
-}
-
-.contentl1{
-    flex: 1;
-}
-
-.contentl2{
-    flex: 1;
+    justify-content: space-evenly;
 }
 
 .contentr{
@@ -143,14 +132,18 @@ ul a,ul a:hover{
     margin-top: 5px;
 }
 
-.review{
+.card{
     border: 1px solid gray;
     margin: 10px 40px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
 }
 
-.content-reviewb h2{
+.card-body a, .card-body a:hover{
+    text-decoration: none;
+}
+
+.content-reviewb h3{
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
