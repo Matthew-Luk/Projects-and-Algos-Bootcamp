@@ -1,5 +1,6 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app.models.user import User
+from flask import flash
 
 class Review:
     db = "flowers"
@@ -54,3 +55,11 @@ class Review:
     def update_review(cls,data):
         query = "UPDATE reviews SET description=%(description)s, created_at=NOW() WHERE id=%(id)s;"
         return connectToMySQL(cls.db).query_db(query,data)
+
+    @staticmethod
+    def validate_review(review):
+        is_valid=True
+        if len(review["description"]) < 2:
+            flash("Review cannot be blank.")
+            is_valid = False
+        return is_valid
