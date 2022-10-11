@@ -81,16 +81,17 @@ ul a,ul a:hover{
 
 .row1{
     display: flex;
-    justify-content: space-between;
+    background-color: #fdfa72;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 0px 40px;
 }
 
-#home1, #home2, #home4, #home5{
+.home1{
     height: 400px;
 }
 
-#home6, #home7{
+.home2{
     height: 200px;
 }
 
@@ -173,4 +174,8 @@ ul a,ul a:hover{
 
 .logo{
     height: 40px;
+}
+
+#review_btn{
+    width: 200px;
 }
