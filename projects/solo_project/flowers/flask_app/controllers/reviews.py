@@ -28,12 +28,10 @@ def edit_review(id):
 
 @app.route("/update/review", methods=["POST"])
 def update_review():
-    data = {
-        "id":id
-    }
-    review = Review.get_by_id(data)
-    if Review.validate_review(request.form):
-        Review.update_review(request.form)
+    review = Review.get_by_id({"id":request.form["id"]})
+    if not Review.validate_review(request.form):
+        return redirect(f"/edit/review/{review.id}")
+    Review.update_review(request.form)
     return redirect("/reviews")
 
 @app.route("/delete/review/<int:id>")
