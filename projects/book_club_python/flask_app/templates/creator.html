@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page for Creator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Welcome, {{user.first_name}}!</h2>
+            <a href="/logout">Log Out</a>
+        </div>
+        <hr>
+        <div class="content">
+            <div class="left">
+                <h3>Title: {{book.title}}</h3>
+                <p>Added by: {{book.users.first_name}} {{book.users.last_name}}</p>
+                <p>Added on: {{book.created_at}}</p>
+                <p>Last updated on: {{book.updated_at}}</p>
+                <label for="">Description: </label>
+                <textarea name="" id="" cols="30" rows="10">{{book.description}}</textarea>
+            </div>
+            <div class="right">
+                <h3>Users Who Like This Book:</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
