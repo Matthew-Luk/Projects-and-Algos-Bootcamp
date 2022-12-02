@@ -77,14 +77,14 @@ countPositives([-1,-1,-1,1])
 
 
 // Create a function that accepts an array. Every time that array has three odd values in a row, print "That’s odd!" Every time the array has three evens in a row, print "Even more so!"
-function evenAndOdds(arr){
-    let x = 0
-    for(i=0;i<arr.length;i++){
+// function evenAndOdds(arr){
+//     let x = 0
+//     for(i=0;i<arr.length;i++){
         
-    }
-}
+//     }
+// }
 
-evenAndOdds([1,1,1,2,2,2,3,4,4,5,5,5])
+// evenAndOdds([1,1,1,2,2,2,3,4,4,5,5,5])
 
 
 // Given arr, add 1 to odd elements ([1], [3], etc.), console.log all values and return arr.
@@ -124,3 +124,78 @@ function addSevenToMost(arr){
 
 let e = addSevenToMost([1,2,3,4,5])
 console.log(e)
+
+
+// Given array, write a function to reverse values, in-place. Example: reverse([3,1,6,4,2]) returns same array, containing [2,4,6,1,3].
+function reverse(arr){
+    console.log(arr.map((item,index) => arr[arr.length-1-index]))
+}
+
+console.log(reverse([3,1,6,4,2]))
+
+function reverse(arr){
+    let i = 0
+    while(i < arr.length - 1){
+        arr.splice(i,0,arr.pop())
+        i++
+    }
+    return arr
+}
+
+console.log(reverse([3,1,6,4,2]))
+
+
+// Given an array, create and return a new one containing all the values of the provided array, made negative (not simply multiplied by -1). Given [1,-3,5], return [-1,-3,-5].
+function negative(arr){
+    let x = []
+    for(i=0;i<arr.length;i++){
+        if(arr[i] < 0){
+            x.push(arr[i])
+        }else{
+            x.push(arr[i]*-1)
+        }
+    }
+    return x
+}
+
+let f = negative([1,-3,5])
+console.log(f)
+
+
+// Create a function that accepts an array, and prints "yummy" each time one of the values is equal to "food". If no array elements are "food", then print "I'm hungry" once.
+function alwaysHungry(arr){
+    let x = 0
+    for(i=0;i<arr.length;i++){
+        if(arr[i] == "food"){
+            console.log("yummy")
+            x += 1
+        }
+    }if(x == 0){
+        console.log("I'm hungry")
+    }
+}
+
+alwaysHungry(["food","yellow","hello","food"])
+alwaysHungry(["hello","world","good","bad","yellow"])
+
+
+// Given array, swap first and last, third and third-tolast, etc.
+function swap(arr){
+    let x = 0
+    for(i=0;i<arr.length;i++){
+        
+    }
+}
+
+swap([1,2,3,4,5,6])
+
+
+// Given array arr and number num, multiply each arr value by num, and return the changed arr.
+function scale(arr,num){
+    for(i=0;i<arr.length;i++){
+        arr[i] = arr[i] * num
+    }
+    console.log(arr)
+}
+
+scale([1,2,3,4,5],3)
