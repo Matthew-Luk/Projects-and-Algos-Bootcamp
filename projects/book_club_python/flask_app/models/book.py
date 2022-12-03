@@ -15,12 +15,17 @@ class Book:
 
     @classmethod
     def save(cls,data):
-        query = "INSERT INTO books(title,description) VALUES(%(title)s,%(description)s);"
+        query = "INSERT INTO books(title,description,user_id) VALUES(%(title)s,%(description)s,%(user_id)s);"
+        return connectToMySQL(cls.db).query_db(query,data)
+
+    @classmethod
+    def update(cls,data):
+        query = "UPDATE books SET description = %(description)s WHERE books.id = %(id)s"
         return connectToMySQL(cls.db).query_db(query,data)
 
     @classmethod
     def get_all(cls):
-        query = "SELECT * FROM books JOIN favorites ON books.id = book_id JOIN users ON users.id = user_id;"
+        query = "SELECT * FROM books JOIN users ON users.id = books.user_id;"
         results = connectToMySQL(cls.db).query_db(query)
         all_books = []
         for row in results:
@@ -45,7 +50,7 @@ class Book:
         row = results[0]
         book = cls(row)
         i = {
-            "id":row["id"],
+            "id":row["user_id"],
             "first_name":row["first_name"],
             "last_name":row["last_name"],
             "email":row["email"],
