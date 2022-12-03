@@ -44,3 +44,8 @@ def dashboard():
         "id":session["user_id"]
     }
     return render_template("dashboard.html", user=User.get_by_id(data), all_books=Book.get_all())
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect("/")
