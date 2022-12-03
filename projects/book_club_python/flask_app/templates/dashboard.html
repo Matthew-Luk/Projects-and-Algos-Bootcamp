@@ -11,10 +11,17 @@
 <body>
     <div id="container2" class="container">
         <div class="header">
-            <h3>Welcome, {{user.first_name}} </h3>
+            <h2>Welcome, {{user.first_name}}!</h2>
             <a href="/logout">Log Out</a>
         </div>
         <hr>
+        {%with messages = get_flashed_messages()%}
+            {%if messages%}
+                {%for message in messages%}
+                    <p class="flash">{{message}}</p>
+                {%endfor%}
+            {%endif%}
+        {%endwith%}
         <div class="content">
             <div class="left">
                 <h3>Add a New Book</h3>
@@ -34,8 +41,10 @@
                 <div>
                     <h3>All Books</h3>
                 </div>
-                <div>
+                <div class="all_books">
                     {%for book in all_books%}
+                    <a href="/books/{{book.id}}">{{book.title}}</a>
+                    <p>(Added by {{book.users.first_name}})</p>
                     {%endfor%}
                 </div>
             </div>
