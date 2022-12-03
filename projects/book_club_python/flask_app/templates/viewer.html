@@ -11,12 +11,23 @@
 <body>
     <div class="container">
         <div class="header">
-            <h3>Welcome, {{user.first_name}}!</h3>
+            <h2>Welcome, {{user.first_name}}!</h2>
             <a href="/logout">Log Out</a>
         </div>
         <hr>
-        <div>
-            <h1>viewer view</h1>
+        <div class="content">
+            <div class="left">
+                <h3>Title: {{book.title}}</h3>
+                <p>Added by: {{book.users.first_name}} {{book.users.last_name}}</p>
+                <p>Added on: {{book.created_at}}</p>
+                <p>Last updated on: {{book.updated_at}}</p>
+                <label for="">Description: </label>
+                <textarea class="form-control" id="" cols="30" rows="10">{{book.description}}</textarea>
+            </div>
+            <div class="right">
+                <h3>Users Who Like This Book:</h3>
+                <a href="">Add to Favorites</a>
+            </div>
         </div>
     </div>
 </body>
