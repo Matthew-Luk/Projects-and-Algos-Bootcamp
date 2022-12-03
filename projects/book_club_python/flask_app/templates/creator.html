@@ -21,11 +21,19 @@
                 <p>Added by: {{book.users.first_name}} {{book.users.last_name}}</p>
                 <p>Added on: {{book.created_at}}</p>
                 <p>Last updated on: {{book.updated_at}}</p>
-                <label for="">Description: </label>
-                <textarea class="form-control" id="" cols="30" rows="10">{{book.description}}</textarea>
+                <form action="/update_description" method="POST">
+                    <label for="description">Description: </label>
+                    <textarea name="description" class="form-control" cols="30" rows="10">{{book.description}}</textarea>
+                    <input type="hidden" name="title" value="{{book.title}}">
+                    <input type="hidden" name="id" value="{{book.id}}">
+                    <input type="submit" value="Update">
+                </form>
             </div>
             <div class="right">
                 <h3>Users Who Like This Book:</h3>
+                {%for user in all_users%}
+                <p>{{user.first_name}} {{user.last_name}}</p>
+                {%endfor%}
             </div>
         </div>
     </div>
