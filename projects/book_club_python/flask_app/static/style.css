@@ -17,6 +17,11 @@
     justify-content:space-around;
 }
 
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
 .btn{
     background-color: #2b78e4;
     color: white;
@@ -33,8 +38,19 @@
 
 .left{
     flex: 1;
+    margin-right: 15px;
 }
 
 .right{
     flex: 1;
+    margin-left: 15px;
+}
+
+.all_books{
+    display: flex;
+    flex-direction: column;
+}
+
+.all_books a, .all_books a:hover{
+    text-decoration: underline;
 }
