@@ -1,6 +1,7 @@
 from flask import render_template, redirect, request, session, flash
 from flask_app.models.user import User
 from flask_app.models.book import Book
+from flask_app.models.favorite import Favorite
 from flask_app import app
 from flask_bcrypt import Bcrypt
 
@@ -44,6 +45,11 @@ def dashboard():
         "id":session["user_id"]
     }
     return render_template("dashboard.html", user=User.get_by_id(data), all_books=Book.get_all())
+
+@app.route("/add_book_to_favorites")
+def add_book_to_favorites():
+    pass
+
 
 @app.route("/logout")
 def logout():
