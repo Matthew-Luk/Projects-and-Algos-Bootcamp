@@ -12,7 +12,10 @@
     <div class="container">
         <div class="header">
             <h2>Welcome, {{user.first_name}}!</h2>
-            <a href="/logout">Log Out</a>
+            <div>
+                <a href="/dashboard">Home</a>
+                <a href="/logout">Log Out</a>
+            </div>
         </div>
         <hr>
         <div class="content">
@@ -26,7 +29,11 @@
             </div>
             <div class="right">
                 <h3>Users Who Like This Book:</h3>
-                <a href="">Add to Favorites</a>
+                <form action="/add_to_favorites" method="POST">
+                    <input type="hidden" name="book_id" value="{{book.id}}">
+                    <input type="hidden" name="user_id" value="{{session['user_id']}}">
+                    <input type="submit" value="Add To Favorites">
+                </form>
             </div>
         </div>
     </div>
