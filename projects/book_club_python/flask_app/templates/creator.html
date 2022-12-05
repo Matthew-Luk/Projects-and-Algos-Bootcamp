@@ -31,9 +31,11 @@
             </div>
             <div class="right">
                 <h3>Users Who Like This Book:</h3>
-                {%for user in all_users%}
-                <p>{{user.first_name}} {{user.last_name}}</p>
-                {%endfor%}
+                <ul>
+                    {%for user in all_users%}
+                    <li>{{user.first_name}} {{user.last_name}}</li>
+                    {%endfor%}
+                </ul>
             </div>
         </div>
     </div>
