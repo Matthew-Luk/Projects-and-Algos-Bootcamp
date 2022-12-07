@@ -24,10 +24,9 @@ def view_book(id):
         "id":session["user_id"]
     }
     book = Book.get_by_id(data)
-    print(session["user_id"])
     if session["user_id"] == book.users.id:
         return render_template("creator.html", user=User.get_by_id(data2), book=Book.get_by_id(data), all_users=Favorite.get_users_who_favorited(data))
-    return render_template("viewer.html", user=User.get_by_id(data2), book=Book.get_by_id(data))
+    return render_template("viewer.html", user=User.get_by_id(data2), book=Book.get_by_id(data), all_users=Favorite.get_users_who_favorited(data))
 
 @app.route("/update_description", methods=["POST"])
 def update_description():
