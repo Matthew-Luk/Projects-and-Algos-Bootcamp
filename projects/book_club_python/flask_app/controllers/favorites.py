@@ -6,9 +6,9 @@ from flask_app import app
 
 @app.route("/add_to_favorites", methods=["POST"])
 def add_to_favorites():
+    book_id = Book.save(request.form)
     data = {
-        "user_id":session["user_id"],
-        "book_id":request.form["book_id"]
+        "book_id":book_id
     }
     Favorite.save(request.form)
     return redirect("/dashboard")
