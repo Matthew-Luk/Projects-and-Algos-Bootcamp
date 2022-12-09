@@ -1,0 +1,50 @@
+What is an array?
+- An array is a list of elements.
+
+
+What types of values can be held in an array?
+- An array can hold booleans, integers, strings, characters, and objects.
+
+
+What happens if you try to contain values of different data types in an array?
+- We cannot store different data types in an array.
+
+
+What is the index of the first element in an array?
+- The index of the first element is 0
+
+
+What is the index of the last element in an array?
+- The index of the last element is arr[arr.length] or 1 minus the number of elements.
+
+
+If you control an array, what is the easiest way to determine the number of values?
+- You can run a for loop that increases a variable by 1 or you can use a built in function such as console.log(arr.length)
+
+
+When would the above method not work well, and what must you do in that case?
+- It would not work well in lower level languages or when built in functions aren't working.
+
+
+What are two ways to make an array one element longer?
+- Two ways to make an array one element longer is to run a for loop with an extra step or use the function push to add an element.
+
+
+What are two ways to make an array two elements shorter?
+- You can run a for loop and set the end of the for loop 2 numbers lower than the length or you can use the pop function twice.
+
+
+What is the upper limit on the number of values an array can hold?
+- It depends on the language but Javascript is 4,294,967,295 elements and Python is 536,870,912 elements.
+
+
+When working with arrays, does working “in-place” really matter? If so, when and why?
+- I think working in-place can be helpful in some situations where you don't want to create a temp variable.
+
+
+Which values are “falsy” in JavaScript, and what does “falsy” mean anyway?
+- Falsy values in Javascript are undefined, null, NaN, 0, ""(empty string), and false. A falsy means when encountered by a boolean context it will return false.
+
+
+What does “passing by reference” mean?
+- Passing by reference means that the memory address of the variable (a pointer to the memory location) is passed to the function.
