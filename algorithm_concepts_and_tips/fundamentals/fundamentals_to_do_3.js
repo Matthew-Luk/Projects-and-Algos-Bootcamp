@@ -181,10 +181,13 @@ alwaysHungry(["hello","world","good","bad","yellow"])
 
 // Given array, swap first and last, third and third-tolast, etc.
 function swap(arr){
-    let x = 0
-    for(i=0;i<arr.length;i++){
-        
+    n = arr.length - 1
+    for(i=0;i<arr.length/2;i++){
+        let temp = arr[i]
+        arr[i] = arr[n-i]
+        arr[n-i] = temp
     }
+    console.log(arr)
 }
 
 swap([1,2,3,4,5,6])
