@@ -31,13 +31,13 @@ class SLL {
     display(){
         let str = ""
         if(this.head == null){
-            return "Empty List"
+            return("Empty list")
         }
         str += this.head.data
-        let runner = this.head.tail
-        while(runner != null){
-            str += ", " + runner.data
-            runner = runner.tail
+        let node = this.head.tail
+        while(node !== null){
+            str += ", " + node.data
+            node = node.tail
         }
         return str
     }
